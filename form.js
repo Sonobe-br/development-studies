@@ -19,9 +19,9 @@ botaoAdicionar.addEventListener("click", function(event){
         
     form.reset();
 
-    });
+});
     
-    function exibeMensagensDeErro(erros){
+function exibeMensagensDeErro(erros){
     var ul = document.querySelector("#mensagens-erro")
     ul.innerHTML = "";
     
@@ -69,15 +69,14 @@ function montaTr(paciente){
     return pacienteTr;
 }
 
-function montaTd(dado, classe){
+function montaTd(dado. classe){
     var td = document.createElement("td");
     td.textContent = dado;
     td.classList.add(classe);
-    return td;
+    return Td;
 }
 
 function validaPaciente(paciente){
-
     var erros = [];
 
     if(!validaPeso(paciente.peso)){
@@ -99,7 +98,6 @@ function validaPaciente(paciente){
     if( paciente.altura.length == 0){
         erros.push("A altura não pode estar em branco");
     }
-  
-    return erros;
+        return erros;
     
 }

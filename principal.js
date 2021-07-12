@@ -2,7 +2,7 @@
 //alert (mensagem);
 //console.log("Fui carregado de um arquivo externo");
 var titulo = document.querySelector(".titulo");
-titulo.textContent = "Drª Aparecida Nutricionista Esportiva";
+titulo.textContent = "Thaís Lopes Nutricionista Esportiva";
 
 var pacientes = document.querySelectorAll(".paciente");
 
@@ -20,28 +20,30 @@ var tdImc = paciente.querySelector(".info-imc");
 var pesoValido = validaPeso(peso); //true or false
 var alturaValida = validaAltura(altura); //true or false 
  
-if(!pesoValido){
-    console.log("Peso inválido");
-    pesoValido = false;
-    tdImc.textContent = "Peso inválido";
-    paciente.classList.add("paciente-invalido"); 
+    if(!pesoValido){
+        console.log("Peso inválido");
+        pesoValido = false;
+        tdImc.textContent = "Peso inválido";
+        paciente.classList.add("paciente-invalido"); 
+    }
+
+    if(!alturaValida){
+        console.log("Altura inválida");
+        alturaValida = false;
+        tdImc.textContent = "Altura inválida";
+        paciente.classList.add("paciente-invalido");
+    }
+
+    if(pesoValido && alturaValida){
+        var imc = calculaImc(peso, altura); 
+        tdImc.textContent = imc;
+    }
 }
 
-if(!alturaValida){
-    console.log("Altura inválida");
-    alturaValida = false;
-    tdImc.textContent = "Altura inválida";
-    paciente.classList.add("paciente-invalido");
-}
 
-if(pesoValido && alturaValida){
-    var imc = calculaImc(peso, altura); 
-    tdImc.textContent = imc;
-}
-}
 
 function validaPeso(peso){
-    if (peso > 0 && peso < 1000){
+    if (peso > 0 && peso < 500){
         return true;
     } else {
         return false;
@@ -56,7 +58,6 @@ function validaAltura(altura){
     }
 
 }
-
 
 titulo.addEventListener("click", function (){
    console.log("fui clicado");
