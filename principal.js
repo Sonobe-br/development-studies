@@ -9,11 +9,11 @@ var pacientes = document.querySelectorAll(".paciente");
 for(var i = 0; i < pacientes.length; i++){
 var paciente = pacientes[i]; 
 
-var tdPeso = paciente.querySelector(".info-peso");
-var peso = tdPeso.textContent;
+var pesoTd = paciente.querySelector(".info-peso");
+var peso = pesoTd.textContent;
 
-var tdAltura = paciente.querySelector(".info-altura");
-var altura = tdAltura.textContent;
+var alturaTd = paciente.querySelector(".info-altura");
+var altura = alturaTd.textContent;
 
 var tdImc = paciente.querySelector(".info-imc");
 
