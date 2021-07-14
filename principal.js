@@ -40,8 +40,6 @@ var alturaValida = validaAltura(altura); //true or false
     }
 }
 
-
-
 function validaPeso(peso){
     if (peso > 0 && peso < 500){
         return true;
@@ -71,7 +69,6 @@ function calculaImc(peso,altura) {
 
 //var imc = peso / (altura * altura);
 //tdImc.textContent = imc;
-
 //console.log(paciente); //contém o paciente = tr 
 //console.log(tdPeso); //contém o peso = td 
 //console.log(peso);
